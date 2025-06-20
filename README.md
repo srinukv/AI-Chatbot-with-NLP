@@ -1,39 +1,113 @@
-import nltk
-from nltk.chat.util import Chat, reflections
 
-# Define some pairs of patterns and responses
-pairs = [
-    [
-        r"hi|hello|hey",
-        ["Hello!", "Hi there!", "Hey! How can I help you?"]
-    ],
-    [
-        r"what is your name?",
-        ["I'm a chatbot created using NLTK.", "You can call me NLTK Bot."]
-    ],
-    [
-        r"how are you?",
-        ["I'm doing great, thank you!", "I'm just a program, but I'm functioning well!"]
-    ],
-    [
-        r"what can you do?",
-        ["I can chat with you and answer simple questions.", "I'm here to help with your queries."]
-    ],
-    [
-        r"(.*) your name?",
-        ["My name is NLTK Bot."]
-    ],
-    [
-        r"quit|exit",
-        ["Goodbye!", "See you later!"]
-    ]
-]
+# -AI-chatbot-with-NLP
 
-# Create and run chatbot
-def start_chat():
-    print("Hi! I'm your chatbot. Type 'quit' to exit.")
-    chatbot = Chat(pairs, reflections)
-    chatbot.converse()
+#COMPANY:CODETECH IT SOLUTIONS
 
-if __name__ == "__main__":
-    start_chat()
+#NAME:VENKATA SRINIVASA RAO KILLADI
+
+#INTERN ID:CT04DF812
+
+#DOMAIN:PYTHON PROGRAMMING
+
+#DURATION:4 WEEKS
+
+#MENTOR:NEEELA SANTOSH
+
+problem statement: 
+
+This project demonstrates a simple rule-based chatbot built using Python and Natural Language Processing (NLP) with NLTK. The chatbot can engage in basic conversations and respond to user queries with predefined answers.
+
+## 📌Objective
+
+To create an interactive chatbot using NLP techniques capable of understanding and responding to simple text-based user queries.
+
+## 🧰 Tools and Libraries Used
+
+- **Python** – Core programming language
+- **NLTK** – Natural Language Toolkit for basic NLP processing
+
+## 📂 Files Included
+
+- `chatbot.py` – Main Python script for running the chatbot
+- `requirements.txt` – Python dependencies
+- `README.md` – Project documentation
+
+📌STEP BY STEP CODE EXPLANATION:
+
+1. Importing Required Modules:
+   
+    import nltk
+   
+    from nltk.chat.util import Chat, reflections
+   
+Chat: A utility in nltk for creating chatbots using predefined pattern-response pairs.
+
+reflections: A dictionary that maps first-person to second-person pronouns (e.g., “I” ↔ “you”), which helps in mirroring user inputs for better responses.
+
+2. Defining Pattern-Response Pairs:
+   
+        pairs = [
+     
+               [r"hi|hello|hey", ["Hello!", "Hi there!", "Hey! How can I help you?"]],
+   
+               ...
+   
+        ]
+-Each item in pairs is a list where:
+
+-The first element is a regex pattern to match user input.
+
+-The second is a list of possible responses (one will be chosen randomly).
+
+3. Chatbot Logic:
+
+       def start_chat():
+   
+       print("Hi! I'm your chatbot. Type 'quit' to exit.")
+   
+       chatbot = Chat(pairs, reflections)
+   
+       chatbot.converse()
+   
+-Chat(pairs, reflections): Creates a chatbot using the patterns and reflection logic.
+
+-.converse(): Starts an interactive chat loop where user can type and get responses.
+
+-Typing "quit" or "exit" ends the conversation.
+
+4. Program Entry Point:
+
+       if __name__ == "__main__":
+   
+        start_chat()
+
+-This ensures the chatbot starts only when the script is run directly, not when imported as a module.
+
+📌SAMPLE OUTPUT:
+
+Hi! I'm your chatbot. Type 'quit' to exit.
+
+> hello
+
+Hi there!
+
+> what is your name?
+
+I'm a chatbot created using NLTK.
+
+> how are you?
+
+I'm doing great, thank you!
+
+> exit
+
+Goodbye!
+
+📌SUMMARY:
+
+-This is a simple NLTK-based chatbot that uses regex patterns to reply to user inputs. 
+
+-It matches user messages with predefined responses and runs in a loop until the user types "quit" or "exit".
+
+📌OUTPUT:
+
